@@ -1,0 +1,60 @@
+FORMAT: 1A
+HOST: http://localhost:5000/
+
+# Gestão de livros
+
+Um gerenciador de livros, onde se pode adicionar, excluir ou editar um livro.
+Cada livro possui um ID, um titulo e um autor.
+
+# Group Livros
+
+## Livros [/livros]
+
+### Listar todos os livros cadastrados [GET]
+
++ Response 200 (application/json)
+{
+    "livros": [
+        {
+            "autor": "Dennis Ritchie",
+            "id": 1,
+            "titulo": "Linguagem de Programacao C"
+        },
+        {
+            "autor": "Deitel & Deitel",
+            "id": 2,
+            "titulo": "Java como programar"
+        }
+    ]
+}
+
+### Cadastrar novo livro [POST]
+
+Para adicionar um novo livro na coleção. Recebe um objeto JSON contendo os dados de um livro.
+
++ titulo (string) - titulo do livro
++ autor (string) - nome do autor do livro
+
++ Request (application/json)
+
+        {
+            "titulo": "A volta dos que não foram",
+            "autor": "Gabriel Turnes"
+        }
+
++ Response 201
+
+    + Headers
+
+    + Body
+
+    {
+            "titulo": "A volta dos que não foram",
+            "autor": "Gabriel Turnes",
+            "id": 3
+    }
+
+### Detalhar um livro [GET]
+
+
+
